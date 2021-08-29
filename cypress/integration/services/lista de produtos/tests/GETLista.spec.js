@@ -6,8 +6,6 @@ describe("get usuarios", () => {
     GETLista.listaUser().should((response) => {
       expect(response.status).to.be.eq(200);
       expect(response.body).to.be.not.null;
-      cy.log(response.body.produtos[0]._id);
-      cy.log(response.body.produtos[1]._id);
     });
   });
 

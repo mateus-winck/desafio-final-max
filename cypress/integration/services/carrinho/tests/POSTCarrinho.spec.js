@@ -7,12 +7,9 @@ describe("POST Produtos", () => {
   it("adicionar um novo carrinho", () => {
     POSTLogin.entrar().should((resEntrar) => {
       expect(resEntrar.status).be.eq(200);
-      cy.log(resEntrar.body.authorization);
       GETLista.listaUser().should((response) => {
         expect(response.status).to.be.eq(200);
         expect(response.body).to.be.not.null;
-        cy.log(response.body.produtos[0]._id);
-        cy.log(response.body.produtos[1]._id);
         Cypress.env("ProductIdOne", response.body.produtos[0]._id);
         Cypress.env("ProductIdTwo", response.body.produtos[1]._id);
         POSTCriar.criarCarrinho(resEntrar.body.authorization).should(
