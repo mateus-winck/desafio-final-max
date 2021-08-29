@@ -1,12 +1,10 @@
 {
-    "produtos": [
-      {
-        
-        "quantidade": 1
-      },
-      {
-        
-        "quantidade": 3
-      }
-    ]
+  "produtos": [
+    {
+      "quantidade": 1
+    },
+    {
+      "quantidade": 3
+    }
+  ]
 }
